@@ -1,2 +1,4 @@
 *.py.swp
 __p*
+*.dat
+*.list

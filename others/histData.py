@@ -25,7 +25,7 @@ from extra import timeFormat, dateFormat
 class Downloader(object):
      def __init__(self,debug=False):
         self._log = logger.getLogger('DLD')        
-        self._log.debug('Initializing data dwonloader. Pandas version={0}, ibpy version:{1}'.format(pd.__version__,ib.version))
+        self._log.debug('Initializing data downloader. Pandas version={0}, ibpy version:{1}'.format(pd.__version__,ib.version))
         self.tws = ibConnection()
         self._dataHandler = _HistDataHandler(self.tws)
                 

@@ -28,7 +28,8 @@ class DataGetter():
         self.tickID += 1
 
 
-def makeContract(symbol, derivative, exchange, expiration = None, strike = None, call_put = None, currency = "USD"):
+def makeContract(symbol, derivative, exchange, expiration = None,
+		 strike = None, call_put = None, currency = "USD"):
     contract = Contract()
     contract.m_symbol = symbol
     contract.m_secType = derivative
@@ -50,7 +51,7 @@ dg = DataGetter()
 strikes = [i/2.0 for i in range(20, 100)]
 for strike in strikes:
     vixOpt = makeContract("VIX", "OPT", "CBOE", '20140819', strike, "C")
-    getSpotTick(vixOpt)
+    dg.getSpotTick(vixOpt)
 
 time.sleep(5)
 
